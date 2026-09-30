@@ -1,2 +1,4 @@
-# AI_HARDWARE_ACCERLATOR
+# softmax-vlsi-accelerator
+
+Efficient VLSI Architecture for Softmax Accelerator for AI Applications
 In progress......
