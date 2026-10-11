@@ -1,0 +1,67 @@
+[
+ {
+  "name": "float_error_identity",
+  "status": "PASS",
+  "detail": "max |predicted/actual - 1| = 2.442e-15 over 3875 vectors (limit 1e-9)"
+ },
+ {
+  "name": "float_within_a_priori_envelope",
+  "status": "PASS",
+  "detail": "0 outputs outside the envelope; smallest margin to a bound = 0.0293 (relative-error units)"
+ },
+ {
+  "name": "float_argmax_equals_exact",
+  "status": "PASS",
+  "detail": "0 mismatches in 3850 random vectors (float model is strictly monotone)"
+ },
+ {
+  "name": "float_monotone_in_logits",
+  "status": "PASS",
+  "detail": "0 order violations in 3875 vectors (equal logits -> equal outputs, larger logit never gets a smaller output)"
+ },
+ {
+  "name": "fixed8_monotone_in_logits",
+  "status": "PASS",
+  "detail": "0 order violations in 3875 vectors (equal logits -> equal outputs, larger logit never gets a smaller output)"
+ },
+ {
+  "name": "fixed16_monotone_in_logits",
+  "status": "PASS",
+  "detail": "0 order violations in 3875 vectors (equal logits -> equal outputs, larger logit never gets a smaller output)"
+ },
+ {
+  "name": "fixed8_argmax_mismatch_only_via_ties",
+  "status": "PASS",
+  "detail": "610/3850 first-index mismatches; 0 are genuine inversions (the rest are output ties that include the true maximum)"
+ },
+ {
+  "name": "fixed16_argmax_mismatch_only_via_ties",
+  "status": "PASS",
+  "detail": "113/3850 first-index mismatches; 0 are genuine inversions (the rest are output ties that include the true maximum)"
+ },
+ {
+  "name": "fixed8_outputs_within_format",
+  "status": "PASS",
+  "detail": "outputs must lie in [0, 1.996094] (UQ1.8); 0 vectors outside"
+ },
+ {
+  "name": "fixed16_outputs_within_format",
+  "status": "PASS",
+  "detail": "outputs must lie in [0, 1.999969] (UQ1.15); 0 vectors outside"
+ },
+ {
+  "name": "shift_invariance_1_1_1_vs_0_0_0",
+  "status": "PASS",
+  "detail": "outputs identical for [1,1,1] and [0,0,0]"
+ },
+ {
+  "name": "shift_and_permutation_10_9_8_vs_-2_-1_0",
+  "status": "PASS",
+  "detail": "[10,9,8] vs [-2,-1,0] reversed (same y multiset): fixed8/fixed16 bit-exact = True; float max rel diff = 2.33e-16 (summation order; limit 1e-12)"
+ },
+ {
+  "name": "large_offset_invariance",
+  "status": "PASS",
+  "detail": "[1000,999,998] equals [10,9,8] bit-for-bit"
+ }
+]

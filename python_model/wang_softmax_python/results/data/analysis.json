@@ -1,0 +1,92 @@
+{
+ "argmax": {
+  "fixed8": {
+   "vectors": 3850,
+   "input_lsb": 0.0625,
+   "mismatches": 610,
+   "mismatch_gap_below_input_lsb": 600,
+   "mismatch_other_ties": 10,
+   "genuine_inversions": 0,
+   "vectors_with_gap_below_input_lsb": 877
+  },
+  "fixed16": {
+   "vectors": 3850,
+   "input_lsb": 0.00390625,
+   "mismatches": 113,
+   "mismatch_gap_below_input_lsb": 110,
+   "mismatch_other_ties": 3,
+   "genuine_inversions": 0,
+   "vectors_with_gap_below_input_lsb": 160
+  }
+ },
+ "overflow": {
+  "fixed8": {
+   "input": 521
+  },
+  "fixed16": {}
+ },
+ "worst_float": {
+  "max_abs": 0.05831332324335525,
+  "length": 16,
+  "range": "u10",
+  "index": 9,
+  "x_spread": 18.315648757161064,
+  "p_exact": 0.5786928190855363,
+  "p_float": 0.520379495842181,
+  "ratio_p_float_over_p_exact": 0.8992326821412726,
+  "factor_pass2_1_plus_e2": 1.0440823670947197,
+  "factor_lnu_exp_minus_dL": 1.0096274032966812,
+  "factor_pass1_F_over_S": 1.1722596276278199,
+  "lnu_error_dL": -0.009581355162961214,
+  "log_factors": {
+   "pass-2 EXPU (1+e2)": 0.04313838203294354,
+   "LNU exp(-dL)": 0.009581355162961214,
+   "pass-1 sum 1/(F/S)": -0.15893319190142896
+  },
+  "dominant": "pass-1 sum 1/(F/S)"
+ },
+ "worst_fixed": {
+  "fixed8": {
+   "mechanism": "pass-1 truncation: terms below one output LSB are dropped, F and lnF are biased low",
+   "p_float_quantized_input": 0.6717705027569172,
+   "F_relative_deviation": 0.14620972245057795,
+   "max_abs_vs_float": 0.11730113592159253,
+   "length": 1024,
+   "range": "n3",
+   "output_index": 557,
+   "p_exact": 0.6731516291045923,
+   "p_float": 0.6795738640784075,
+   "p_fixed": 0.796875,
+   "F_fixed": 1.4921875,
+   "F_float_same_quantized_input": 1.7477213541045786,
+   "lnF_fixed": 0.3359375,
+   "lnF_float_same_quantized_input": 0.5140584309468978,
+   "pass1_outputs_truncated_to_zero": 991,
+   "pass1_outputs": 1024,
+   "true_sum_of_those_terms": 0.183683878518641,
+   "overflow_events": [
+    "input"
+   ]
+  },
+  "fixed16": {
+   "mechanism": "input quantization moved z across an integer boundary: the linear fit is discontinuous for d > 1, so u changes and the output jumps (up to 2*d2/(1+d2)-1)",
+   "p_float_quantized_input": 0.5203920384924239,
+   "F_relative_deviation": 7.382797710020483e-05,
+   "max_abs_vs_float": 0.020944615546126588,
+   "length": 16,
+   "range": "u10",
+   "output_index": 14,
+   "p_exact": 0.5790405514547456,
+   "p_float": 0.5413303577336266,
+   "p_fixed": 0.5203857421875,
+   "F_fixed": 2.02545166015625,
+   "F_float_same_quantized_input": 2.025601206195715,
+   "lnF_fixed": 0.69622802734375,
+   "lnF_float_same_quantized_input": 0.6963004146297771,
+   "pass1_outputs_truncated_to_zero": 9,
+   "pass1_outputs": 16,
+   "true_sum_of_those_terms": 3.632761276094243e-05,
+   "overflow_events": []
+  }
+ }
+}
